@@ -8,114 +8,24 @@
   <body>
     <script type="module" src="./javascript/main.js"></script>
     <h1>Mood Tracker</h1>
-    <form>
+    <form id="new-entry">
       <h2>March 4</h2>
-      <textarea></textarea>
+      <textarea name="memo" required></textarea>
 
-      <label><input type="checkbox" name="mood-tags" />Happy</label>
-      <label><input type="checkbox" name="mood-tags" />Sad</label>
-      <label><input type="checkbox" name="mood-tags" />Depressed</label>
-      <label><input type="checkbox" name="mood-tags" />Excited</label>
-      <label><input type="checkbox" name="mood-tags" />Stressed</label>
+      <label><input type="checkbox" name="mood-tags" value="happy" />Happy</label>
+      <label><input type="checkbox" name="mood-tags" value="sad" />Sad</label>
+      <label><input type="checkbox" name="mood-tags" value="depressed" />Depressed</label>
+      <label><input type="checkbox" name="mood-tags" value="excited" />Excited</label>
+      <label><input type="checkbox" name="mood-tags" value="stressed" />Stressed</label>
       <button type="submit">Done</button>
     </form>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>March 2</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>March 1</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 28</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 27</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 26</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 25</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 24</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 23</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 22</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 21</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 20</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 19</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 18</h2>
-      <p>Memo</p>
-    </div>
-    <div>
-      <div>Happy</div>
-      <div>Sad</div>
-      <div>Depressed</div>
-      <h2>February 17</h2>
-      <p>Memo</p>
-    </div>
+    <div id="entry-wrapper"></div>
+    <template id="entry-template">
+      <div>
+        <div class="emotion-wrapper"></div>
+        <h2 class="date"></h2>
+        <p class="memo"></p>
+      </div>
+    </template>
   </body>
 </html>
