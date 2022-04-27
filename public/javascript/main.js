@@ -33,7 +33,7 @@ newEntryForm.addEventListener("submit", (event) => {
     memo: entryData.get("memo"),
   };
 
-  logStub.push(newEntry);
+  logStub.unshift(newEntry);
 
   loadEntries(logStub);
   newEntryForm.reset();
