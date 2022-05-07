@@ -17,12 +17,18 @@
       <h2>March 4</h2>
       <label for="memo">Daily Note:</label>
       <textarea id="memo" name="memo" rows="6" placeholder="Text Here..." required></textarea>
+      <label>I am feeling: </label>
       <div class="tag-category">
-        <label><input type="checkbox" name="mood-tags" value="happy" />Happy</label>
-        <label><input type="checkbox" name="mood-tags" value="sad" />Sad</label>
-        <label><input type="checkbox" name="mood-tags" value="depressed" />Depressed</label>
-        <label><input type="checkbox" name="mood-tags" value="excited" />Excited</label>
-        <label><input type="checkbox" name="mood-tags" value="stressed" />Stressed</label>
+        <input type="checkbox" id="mood-happy" name="mood-tags" value="happy" />
+        <label for="mood-happy">Happy</label>
+        <input type="checkbox" id="mood-sad" name="mood-tags" value="sad" />
+        <label for="mood-sad">Sad</label>
+        <input type="checkbox" id="mood-depressed" name="mood-tags" value="depressed" />
+        <label for="mood-depressed">Depressed</label>
+        <input type="checkbox" id="mood-excited" name="mood-tags" value="excited" />
+        <label for="mood-excited">Excited</label>
+        <input type="checkbox" id="mood-stressed" name="mood-tags" value="stressed" />
+        <label for="mood-stressed">Stressed</label>
       </div>
       <button type="submit">Done</button>
     </form>

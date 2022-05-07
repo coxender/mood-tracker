@@ -1,7 +1,10 @@
 :root {
   --primary: #9466a1;
-  --primary-light: #0097ff;
-  --primary-dark: #005bea;
+  --primary-light: #a273ae;
+  --primary-dark: #824e90;
+
+  --primary-strong: var(--primary-dark);
+  --primary-weak: var(--primary-light);
 
   --on-primary: white;
 
@@ -11,9 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #9466a1;
-    --primary-light: #0097ff;
-    --primary-dark: #005bea;
+    --primary-strong: var(--primary-light);
+    --primary-weak: var(--primary-dark);
 
     --surface: #121212;
     --on-surface: #ffffff;
@@ -29,11 +31,19 @@ html {
 button {
   appearance: none;
   border: none;
-  border-radius: 12px;
+  border-radius: 10000px;
   background-color: var(--primary);
   color: var(--on-primary);
-  padding: 16px 24px;
+  padding: 12px 24px;
   font-size: 16px;
+  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+button:hover,
+button:focus-visible {
+  outline: none;
+  background-color: var(--primary-strong);
+  transform: scale(1.1);
 }
 
 body {
@@ -83,13 +93,55 @@ h1 {
   resize: vertical;
   background-color: var(--surface);
   color: var(--on-surface);
+  border-radius: 12px;
+  outline: 1px solid var(--primary);
+  padding: 4px;
+  border: 4px solid transparent;
+  font-family: inherit;
 }
 
-.mood-category {
+#new-entry #memo:focus-visible {
+  outline-color: var(--primary-strong);
+  outline-width: 2px;
+}
+
+.tag-category {
+  display: flex;
+  gap: 8px;
+}
+
+input[name="mood-tags"] {
+  appearance: none;
+  position: absolute;
+  margin: 0;
+}
+
+input[name="mood-tags"] + label {
+  display: block;
+  outline: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 10000px;
+  padding: 4px 16px;
+}
+
+input[name="mood-tags"]:focus-visible + label {
+  outline-width: 2px;
+  outline-color: var(--primary-strong);
+  color: var(--primary-strong);
+  font-weight: 700;
+}
+
+input[name="mood-tags"]:checked + label {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+input[name="mood-tags"]:checked:focus-visible + label {
+  background-color: var(--primary-strong);
 }
 
 #new-entry > button {
-  justify-self: center;
+  justify-self: end;
 }
 
 #entry-wrapper {
